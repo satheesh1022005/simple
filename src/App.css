@@ -1,0 +1,38 @@
+body{
+  background: linear-gradient(to right,#7F7FD5,#91EAE4);
+}
+#result{
+  background-color: #000000;
+  opacity: 0.4;
+  font-size: 2.7em;
+  padding-left: 20px;
+ 
+}
+.App h1{
+  font-size: 1.8em;
+  
+}
+.App{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+ 
+}
+.App #oper{
+  padding-top: 10px;
+}
+.App #oper button{
+  margin-right: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  
+}
+.App #oper button:hover,
+.App #oper button:focus{
+  background-color: black;
+  opacity:0.8;
+  color:white;
+  font-weight: bolder;
+  cursor: arrow;
+}
