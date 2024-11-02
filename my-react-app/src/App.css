@@ -1,0 +1,143 @@
+/* General App Container */
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Floating Action Button (FAB) Styling */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.fab:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styling for Adding/Editing Contact */
+.add-contact-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button within the Modal */
+.add-contact-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.add-contact-modal .close-button:hover {
+  color: #333;
+}
+
+/* Input Fields Styling */
+.add-contact-modal input[type="text"],
+.add-contact-modal input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.add-contact-modal input[type="text"]:focus,
+.add-contact-modal input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styling inside Modal */
+.add-contact-modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-contact-modal button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .app-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .fab {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .add-contact-modal {
+    width: 90%;
+    max-width: 350px;
+  }
+}

@@ -1,0 +1,91 @@
+.contact-list {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap for more spacing */
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px; /* Increased padding for larger cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-basis: calc(80% - 20px); /* Adjusted width to fit 5 cards per row */
+    max-width: calc(80% - 20px);  /* Optional: ensures cards don’t grow beyond this width */
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        flex-basis: calc(85% - 20px); /* Show 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        flex-basis: calc(50% - 20px); /* Show 1 card per row on very small screens */
+    }
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}

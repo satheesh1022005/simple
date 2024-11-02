@@ -1,0 +1,91 @@
+/* SendMail.css */
+.send-mail {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.send-mail h2 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+.send-mail-form label {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    display: block;
+    color: #555;
+}
+
+.send-mail-form input,
+.send-mail-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.send-mail-form textarea {
+    min-height: 120px;
+}
+
+.send-button {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #218838;
+}
+
+.mail-sent-popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    padding: 1em 1.5em;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.mail-sent-popup p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.mail-sent-popup button {
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    color: #4caf50;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mail-sent-popup button:hover {
+    background-color: #eee;
+}
