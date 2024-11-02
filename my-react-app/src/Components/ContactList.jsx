@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactList.css';
-
+import ContactItem from './ContactItem'
 function ContactList({ contacts, onDelete, onEdit, search, setSearch }) {
     const user = JSON.parse(localStorage.getItem('user')) || {};
 
@@ -11,13 +11,7 @@ function ContactList({ contacts, onDelete, onEdit, search, setSearch }) {
     };
 
     // Filter contacts based on search criteria
-    const filteredContacts = contacts.filter(contact => {
-        return (
-            contact.name.toLowerCase().includes(search.name.toLowerCase()) &&
-            contact.department.toLowerCase().includes(search.department.toLowerCase()) &&
-            contact.domain.toLowerCase().includes(search.domain.toLowerCase())
-        );
-    });
+    const filteredContacts = contacts;
 
     console.log("Filtered Contacts:", filteredContacts); // Debugging line
 

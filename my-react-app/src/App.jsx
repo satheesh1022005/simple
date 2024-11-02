@@ -106,7 +106,7 @@ function App() {
                                     <span>+</span>
                                 </button>
                             )}
-                            {(isAddContactVisible || editContact) && (
+                            {(
                                 <div className="add-contact-modal">
                                     <AddContact
                                         closeModal={() => {

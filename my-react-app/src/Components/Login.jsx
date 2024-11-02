@@ -15,10 +15,10 @@ const Login = ({ setRole }) => {
         // Mock authentication logic
         if (credentials.role === 'teacher') {
             setRole('teacher');
-            navigate('/teacher');
+            navigate('/');
         } else if (credentials.role === 'student') {
             setRole('student');
-            navigate('/student');
+            navigate('/');
         } else {
             alert('Invalid role');
         }
