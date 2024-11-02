@@ -18,7 +18,7 @@ function App() {
         const savedUser = localStorage.getItem('user');
         return savedUser ? JSON.parse(savedUser) : null;
     });
-
+    console.log(user);
     useEffect(() => {
         console.log("User state:", user); // Check if user state updates correctly
         if (user) fetchContacts();
@@ -41,7 +41,7 @@ function App() {
     };
 
     const addContact = async (newContact) => {
-        if (user.role !== 'teacher') return;
+        if (user!== 'teacher') return;
         try {
             await axios.post('http://localhost:5000/contact/add', newContact);
             fetchContacts();
@@ -61,7 +61,7 @@ function App() {
     };
 
     const deleteContact = async (contactId) => {
-        if (user.role !== 'teacher') return;
+        if (user !== 'teacher') return;
         try {
             await axios.delete(`http://localhost:5000/contact/${contactId}`);
             fetchContacts();
@@ -94,19 +94,22 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/" element={user ? (
                         <>
+                            <div>
+                                <button onClick={handleLogout}>logout</button>
+                            </div>
                             <ContactList
                                 contacts={contacts}
                                 search={search}
                                 setSearch={setSearch}
                                 setEditContact={setEditContact}
-                                deleteContact={user.role === 'teacher' ? deleteContact : null}
+                                deleteContact={user === 'teacher' ? deleteContact : null}
                             />
-                            {user.role === 'teacher' && (
+                            {user === 'teacher' && (
                                 <button className="fab" onClick={toggleAddContactForm}>
                                     <span>+</span>
                                 </button>
                             )}
-                            {(
+                            {(isAddContactVisible || editContact) && (
                                 <div className="add-contact-modal">
                                     <AddContact
                                         closeModal={() => {
